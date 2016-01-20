@@ -33,8 +33,8 @@ for (var i = 0; i < paths.length; i++) {
     } catch (e) {
     }
     try {
-      console.error('Symlinking %s => %s', filename, out);
-      fs.symlinkSync(filename, out);
+      console.error('Moving %s => %s', filename, out);
+      fs.renameSync(filename, out);
     } catch (e) {
       // Ignore errors
     }
